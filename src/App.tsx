@@ -1,10 +1,16 @@
+import { QuizProvider } from "./context/QuizContext";
+import QuestionRenderer from "./components/QuestionRenderer";
+
 import "./App.css";
 
 function App() {
   return (
-    <div className="text-center">
-      <p className="text-xl">Quiz App</p>
-    </div>
+    <QuizProvider>
+      <div className="App">
+        <div className="w-full h-40 bg-pink"></div>
+        <QuestionRenderer />
+      </div>
+    </QuizProvider>
   );
 }
 
